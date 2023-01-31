@@ -12,10 +12,11 @@ function MovieList() {
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
+    // Tells Sagas to get the list of movies
 
     const getDetails = (id) => {
         history.push(`/details/${id}`)
-        
+        // Takes user to details page for the selected movie when the div is clicked
     };
 
     return (
@@ -32,8 +33,7 @@ function MovieList() {
                 })}
             </section>
         </main>
-
     );
-}
+} // Displays a div with the poster and title for each movie
 
 export default MovieList;

@@ -36,7 +36,7 @@ router.get('/:id', (req, res) => {
       console.log('ERROR: Get movie details', err);
       res.sendStatus(500)
     })
-
+    // Gets the movie details from the database, as well as the matching genres
 });
 
 router.post('/', (req, res) => {
