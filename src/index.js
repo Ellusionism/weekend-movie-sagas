@@ -62,7 +62,7 @@ const genres = (state = [], action) => {
     }
 }
 
-const details = (state = {}, action) => {
+const details = (state = [], action) => {
     switch (action.type) {
         case 'SET_DETAILS':
             return action.payload[0];
@@ -79,7 +79,7 @@ const storeInstance = createStore(
         details
     }),
     // Add sagaMiddleware to our store
-    applyMiddleware(sagaMiddleware, logger),
+    applyMiddleware(sagaMiddleware, logger)
 );
 
 // Pass rootSaga into our sagaMiddleware

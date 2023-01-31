@@ -1,4 +1,9 @@
-.movies {
-    display : flex;
-    flex-wrap: wrap;
+.moviesGrid {
+    display : grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.movieTitle {
+    display: block;
+    height: 30px;
 }

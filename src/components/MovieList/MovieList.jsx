@@ -21,11 +21,11 @@ function MovieList() {
     return (
         <main>
             <h1>MovieList</h1>
-            <section className="movies">
+            <section className="moviesGrid">
                 {movies.map(movie => {
                     return (
                         <div key={movie.id} onClick = {() => getDetails(movie.id)}>
-                            <h3>{movie.title}</h3>
+                            <h3 className="movieTitle">{movie.title}</h3>
                             <img src={movie.poster} alt={movie.title}/>
                         </div>
                     );
